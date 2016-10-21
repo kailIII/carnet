@@ -3,11 +3,15 @@
 
 
 Carnet d'adresses en ligne réalisé sous Symfony2.
+
 Prérequis  :
+
 Composer : https://getcomposer.org/Composer-Setup.exe
 
 Commandes
+
 composer update
+
 app/console doctrine:schema:update --force
 
 
