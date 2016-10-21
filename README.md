@@ -19,4 +19,4 @@ Fonctionnalités:
 · Inviter/Ajouter/Afficher/Lister/EditerSupprimer des contacts de son carnet d'adresses (membres qui pourront aussi se connecter à leur tour). 
 · Afficher/Modifier ses informations (e-mail / adresse / téléphone / site web).
 
-![Alt text](/readmeimages/Authentification.png?raw=true "Optional Title")
+![Alt text](carnet/readmeimages/Authentification.png?raw=true "Optional Title")
