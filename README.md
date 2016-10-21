@@ -20,3 +20,13 @@ Fonctionnalités:
 · Afficher/Modifier ses informations (e-mail / adresse / téléphone / site web).
 
 ![Alt text](/readmeimages/Authentification.PNG?raw=true "Optional Title")
+
+![Alt text](/readmeimages/Inscription.PNG?raw=true "Optional Title")
+
+![Alt text](/readmeimages/liste.PNG?raw=true "Optional Title")
+
+![Alt text](/readmeimages/creation.PNG?raw=true "Optional Title")
+
+![Alt text](/readmeimages/affichage.PNG?raw=true "Optional Title")
+
+![Alt text](/readmeimages/Modification.PNG?raw=true "Optional Title")
