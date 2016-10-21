@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contact edit</h1>
+
+    {{ form_start(edit_form) }}
+
+    <div class="col-md-9 createform"  >
+        <table class="table table-bordered">
+            <tbody>
+
+            <tr >
+                <th>Prénom</th>
+                <td > {{ form_errors(edit_form.fisrtName) }}
+                    {{ form_widget(edit_form.fisrtName) }}  </td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ form_errors(edit_form.lasteName) }}
+                    {{ form_widget(edit_form.lasteName) }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ form_errors(edit_form.email) }}
+                    {{ form_widget(edit_form.email) }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ form_errors(edit_form.adress) }}
+                    {{ form_widget(edit_form.adress) }}</td>
+            </tr>
+            <tr>
+                <th>Téléphone</th>
+                <td>{{ form_errors(edit_form.phone) }}
+                    {{ form_widget(edit_form.phone) }}</td>
+            </tr>
+            <tr>
+                <th>Site web</th>
+                <td>
+
+                    {{ form_errors(edit_form.website) }}
+                    {{ form_widget(edit_form.website) }}
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <input type="submit" value="Modifier"  style="width:60%" class="btn btn-default">
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+    {{ form_end(edit_form) }}
+
+
+
+{% endblock %}

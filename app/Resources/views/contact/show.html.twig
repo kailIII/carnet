@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>  {{ contact.lasteName }} {{ contact.fisrtName }}</h1>
+        <div class="col-md-3">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="{{ path('contact_index') }}" class="btn btn-success btn-block">Retour</a></td>
+                    <td>
+                        <a href="{{ path('contact_edit', { 'id': contact.id }) }}" class="btn btn-warning btn-block">Modifier</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Prénom</th>
+                    <td>{{ contact.fisrtName }}</td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ contact.lasteName }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ contact.email }}</td>
+                </tr>
+                <tr>
+                    <th>Adresse</th>
+                    <td>{{ contact.adress }}</td>
+                </tr>
+                <tr>
+                    <th>Téléphone</th>
+                    <td>{{ contact.phone }}</td>
+                </tr>
+                <tr>
+                    <th>Site web</th>
+                    <td>{{ contact.website }}</td>
+                </tr>
+                </tbody>
+            </table>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Supprimer" class="btn btn-danger btn-block">
+            {{ form_end(delete_form) }}
+        </div>
+{% endblock %}

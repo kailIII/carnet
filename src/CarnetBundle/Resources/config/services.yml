@@ -1,4 +1,16 @@
 services:
-#    carnet.example:
-#        class: CarnetBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    app.form.registration:
+        class: CarnetBundle\Form\RegistrationFormType
+        tags:
+            - { name: "form.type", alias: "app_user_registration" }
+
+    app.form.invitation:
+        class: CarnetBundle\Form\InvitationFormType
+        arguments: ['@app.form.data_transformer.invitation']
+        tags:
+            - { name: "form.type", alias: "app_invitation_type" }
+
+    app.form.data_transformer.invitation:
+        class: CarnetBundle\Form\DataTransformer\InvitationToCodeTransformer
+        arguments: ['@doctrine.orm.entity_manager']
+        public: false

@@ -1,3 +1,7 @@
+carnet_contact:
+    resource: "@CarnetBundle/Resources/config/routing/contact.yml"
+    prefix:   /contact
+
 carnet_homepage:
     path:     /
     defaults: { _controller: CarnetBundle:Default:index }

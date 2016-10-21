@@ -1,0 +1,17 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% block title %}Connexion{% endblock %}
+{% block fos_user_content %}
+
+    <div id="bg">
+        <div class="module">
+
+            <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="registerform fos_user_registration_register">
+                {{ form_widget(form) }}
+                <input type="submit" class="button" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+
+            </form>
+        </div>
+    </div>
+
+
+{% endblock fos_user_content %}

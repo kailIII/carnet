@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Création du Contact</h1>
+
+{{ form_start(form) }}
+
+    <div class="col-md-9 createform"  >
+        <table class="table table-bordered">
+            <tbody>
+
+            <tr >
+                <th>Prénom</th>
+                <td > {{ form_errors(form.fisrtName) }}
+                    {{ form_widget(form.fisrtName) }}  </td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ form_errors(form.lasteName) }}
+                    {{ form_widget(form.lasteName) }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ form_errors(form.email) }}
+                    {{ form_widget(form.email) }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ form_errors(form.adress) }}
+                    {{ form_widget(form.adress) }}</td>
+            </tr>
+            <tr>
+                <th>Téléphone</th>
+                <td>{{ form_errors(form.phone) }}
+                    {{ form_widget(form.phone) }}</td>
+            </tr>
+            <tr>
+                <th>Site web</th>
+                <td>
+
+                    {{ form_errors(form.website) }}
+                    {{ form_widget(form.website) }}
+                </td>
+            </tr>
+            <tr>
+                <td >
+                <input type="submit" value="Crée"  style="width:60%" class="btn btn-default">
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

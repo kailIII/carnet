@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block title %}Carnet d'Adresses{% endblock %}
+
+{% block body %}
+    <h1>Carnet d'Adresses</h1>
+
+    <a href="{{ path('contact_new') }}" class="btn btn-primary btn-block">Nouveau Contact</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Adresse</th>
+                <th>Téléphone</th>
+                <th>Site Web</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% set i = 0 %}
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.lasteName }}</td>
+                <td>{{ contact.fisrtName }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.adress }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.website }}</td>
+                <td>
+                {% for user in users %}
+                    {% if contact.email == user.email %}
+                        <span class="label label-success">Membre</span>
+                    {% endif %}
+
+
+                {% endfor %}
+                </td>
+                <td>
+                    <a href="{{ path('contact_show', { 'id': contact.id }) }}" class="btn btn-success">Afficher</a>
+                    <a href="{{ path('contact_edit', { 'id': contact.id }) }}" class="btn btn-primary">Modifier</a>
+                    <a href="{{ path('contact_show', { 'id': contact.id }) }}" class="btn btn-danger">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
