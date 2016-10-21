@@ -2,13 +2,12 @@
 
 {% block body %}
     <h1>  {{ contact.lasteName }} {{ contact.fisrtName }}</h1>
-        <div class="col-md-3">
-            <table class="table table-bordered">
+        <div class="col-md-9">
+            <table class="table table-bordered" >
                 <tbody>
                 <tr>
-                    <td>
-                        <a href="{{ path('contact_index') }}" class="btn btn-success btn-block">Retour</a></td>
-                    <td>
+
+                    <td colspan="2">
                         <a href="{{ path('contact_edit', { 'id': contact.id }) }}" class="btn btn-warning btn-block">Modifier</a>
                     </td>
                 </tr>

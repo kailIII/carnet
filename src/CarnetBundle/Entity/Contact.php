@@ -26,8 +26,7 @@ class Contact
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="CarnetBundle\Entity\User", cascade={"remove"})
-     * @ORM\JoinColumn(onDelete="CASCADE")
+     * @ORM\ManyToOne(targetEntity="CarnetBundle\Entity\User")
      */
     private $owner;
 
